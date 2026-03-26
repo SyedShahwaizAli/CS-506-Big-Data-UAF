@@ -6,9 +6,11 @@ This repository contains organized tasks for each class session with codes, repo
 
 ## Repository Structure
 
-- `Task-01/` - First class task files and documentation
-- `Task-02/` - Second class task files and documentation
-- `Task-03/` - Third class task files and documentation
+- `Lab-01/` - First class task files and documentation
+- `Lab-02/` - Second class task files and documentation
+- `Lab-03/` - Third class task files and documentation
+- `Lab-05/` - Fourth class task files and documentation
+- `Lab-06/` - Fifth class task files and documentation
 - `Resources/` - Lecture notes, datasets, and references
 
 ## How to Use
