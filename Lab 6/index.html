@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World Data Dashboard - BSCS Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="top-left">
+      <span class="emoji">🌍</span>
+      <div>
+        <h1>World Data Dashboard</h1>
+        <p>Practical Task 6 &nbsp;|&nbsp; BSCS 6th Semester &nbsp;|&nbsp; Data Visualization</p>
+      </div>
+    </div>
+    <button onclick="exportDashboard()">⬇ Export as HTML</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('tab1', this)">📈 Line &amp; Bar</button>
+    <button class="tab" onclick="showTab('tab2', this)">🔵 Scatter Plot</button>
+    <button class="tab" onclick="showTab('tab3', this)">🗺 World Map</button>
+    <button class="tab" onclick="showTab('tab4', this)">🧊 3D Charts</button>
+    <button class="tab" onclick="showTab('tab5', this)">▶ Animation</button>
+  </div>
+
+  <div class="info-cards">
+    <div class="card">
+      <div class="card-num">8.1 B</div>
+      <div class="card-lbl">World Population</div>
+    </div>
+    <div class="card">
+      <div class="card-num">$105 T</div>
+      <div class="card-lbl">Global GDP</div>
+    </div>
+    <div class="card">
+      <div class="card-num">$13,100</div>
+      <div class="card-lbl">GDP Per Capita</div>
+    </div>
+    <div class="card">
+      <div class="card-num">72.8 yrs</div>
+      <div class="card-lbl">Avg Life Expectancy</div>
+    </div>
+  </div>
+
+  <div id="tab1" class="tab-content active">
+    <h2>📈 Task 37 — Line Chart &amp; Bar Chart</h2>
+    <p class="desc">These charts show world population growth over time and regional GDP comparison.</p>
+    <div class="two-col">
+      <div class="chart-box" id="lineChart"></div>
+      <div class="chart-box" id="barChart"></div>
+    </div>
+  </div>
+
+  <div id="tab2" class="tab-content">
+    <h2>🔵 Task 38 — Scatter Plot with Hover Info</h2>
+    <p class="desc">Hover over any dot to see country details. Bubble size = population size.</p>
+    <div class="chart-box big" id="scatterChart"></div>
+  </div>
+
+  <div id="tab3" class="tab-content">
+    <h2>🗺 Task 39 — Choropleth World Map</h2>
+    <p class="desc">Color shows value per country. Click a button to change what's shown.</p>
+    <div class="map-btns">
+      <button class="mbtn active" onclick="drawMap('gdp', this)">GDP Per Capita</button>
+      <button class="mbtn" onclick="drawMap('pop', this)">Population</button>
+      <button class="mbtn" onclick="drawMap('life', this)">Life Expectancy</button>
+    </div>
+    <div class="chart-box big" id="mapChart"></div>
+  </div>
+
+  <div id="tab4" class="tab-content">
+    <h2>🧊 Task 40 — 3D Charts</h2>
+    <p class="desc">Rotate by dragging. Left = 3D Scatter, Right = 3D Surface (math model).</p>
+    <div class="two-col">
+      <div class="chart-box big" id="scatter3d"></div>
+      <div class="chart-box big" id="surface3d"></div>
+    </div>
+  </div>
+
+  <div id="tab5" class="tab-content">
+    <h2>▶ Task 41 — Animated Time Series</h2>
+    <p class="desc">Press Play to watch GDP grow from 2000 to 2024. Use the slider to jump to a year.</p>
+    <div class="chart-box big" id="animChart"></div>
+    <div class="chart-box" id="areaChart"></div>
+  </div>
+
+  <div class="footer">
+    BSCS 6th Semester &nbsp;|&nbsp; Practical Task 6 &nbsp;|&nbsp; Data: World Bank &amp; IMF 2024
+  </div>
+
+  <script src="data.js"></script>
+  <script src="charts.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
